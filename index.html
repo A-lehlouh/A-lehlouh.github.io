@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Abdelrahman Lehlouh - AI Engineer in Kuwait. Generative AI, LLM fine-tuning (LLaMA, LoRA), machine learning and deep learning projects.">
+<meta property="og:title" content="Abdelrahman Lehlouh - AI Engineer">
+<meta property="og:description" content="Generative AI, LLM fine-tuning and machine learning projects.">
+<title>Abdelrahman Lehlouh | AI Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+html{color-scheme:light}body{margin:0;font-size:14px}img{max-width:100%}[hidden]{display:none!important}
+
+/* Layout: a single reading column; a model-card strip of key figures; projects as rows with a spec sidebar, like a model card */
+:root{
+  --bg:#f5f7f9; --surface:#ffffff; --ink:#14223a; --muted:#56637a; --line:#d9dfe7;
+  --accent:#a8741a; --accent-soft:#f3e9d6; --navy:#1d3a63;
+  --f-display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --f-body:"IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0e1522; --surface:#152035; --ink:#e7ecf3; --muted:#9aa7bb; --line:#26344d;
+  --accent:#e0ad55; --accent-soft:#2e2717; --navy:#8fb3e6; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0e1522; --surface:#152035; --ink:#e7ecf3; --muted:#9aa7bb; --line:#26344d;
+  --accent:#e0ad55; --accent-soft:#2e2717; --navy:#8fb3e6; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.6}
+.wrap{max-width:980px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+a{color:var(--navy);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.15}
+.label{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+
+header{padding-block:56px 40px;border-bottom:1px solid var(--line)}
+.hero{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center}
+.hero > div{min-width:0}
+.hero h1{font-size:clamp(34px,6vw,56px);font-weight:700;letter-spacing:-.02em;margin-top:10px}
+.role{font-size:clamp(17px,2.2vw,20px);color:var(--muted);margin:12px 0 0;max-width:60ch}
+.role strong{color:var(--ink);font-weight:600}
+.photo{width:150px;aspect-ratio:4/5;max-width:100%;object-fit:cover;border-radius:6px;border:1px solid var(--line)}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--ink);background:var(--accent-soft);padding:4px 12px;border-radius:999px;margin-top:20px}
+.status::before{content:"";width:8px;height:8px;border-radius:50%;background:#2f9e5e}
+.contact{display:flex;flex-wrap:wrap;gap:10px 20px;margin-top:20px;font-size:15px}
+.contact span{font-family:var(--f-mono);font-size:14px;user-select:all}
+.copy{font:inherit;font-size:12px;font-family:var(--f-mono);background:none;border:1px solid var(--line);color:var(--muted);border-radius:4px;padding:1px 8px;margin-left:6px;cursor:pointer}
+.copy:hover{color:var(--ink);border-color:var(--muted)}
+
+.ledger{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}
+.ledger div{padding:22px 16px 22px 0;min-width:0}
+.ledger div + div{padding-left:16px;border-left:1px solid var(--line)}
+.ledger b{display:block;font-family:var(--f-display);font-size:30px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--navy)}
+.ledger small{color:var(--muted);font-size:13px;line-height:1.4;display:block}
+
+section{padding-block:48px;border-bottom:1px solid var(--line)}
+section > h2{font-size:28px;margin-top:6px;margin-bottom:24px}
+.lead{max-width:68ch;margin:0}
+
+.proj{display:grid;grid-template-columns:200px 1fr;gap:24px;padding-block:28px;border-top:1px solid var(--line)}
+.proj:first-of-type{border-top:0;padding-top:0}
+.proj aside{font-family:var(--f-mono);font-size:13px;color:var(--muted);line-height:1.7}
+.proj aside a{display:inline-block;margin-top:8px}
+.proj > div{min-width:0}
+.proj h3{font-size:21px;font-weight:700}
+.proj p{margin:8px 0 0;max-width:66ch}
+.finds{list-style:none;padding:0;margin:16px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.finds li{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px;font-size:14px;line-height:1.45;color:var(--muted)}
+.finds b{display:block;font-family:var(--f-mono);font-size:20px;font-weight:500;color:var(--ink);font-variant-numeric:tabular-nums}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.tags span{font-family:var(--f-mono);font-size:12px;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:1px 8px}
+
+.sub{font-family:var(--f-display);font-size:19px;margin:36px 0 18px}
+.mini{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px 32px}
+.mini article{min-width:0}
+.mini h3{font-size:18px}
+.mini p{margin:6px 0 0;font-size:15px;color:var(--muted)}
+.mini .stack{font-family:var(--f-mono);font-size:12px;color:var(--muted);margin-top:6px}
+
+.xp{display:grid;grid-template-columns:200px 1fr;gap:6px 24px;padding-block:18px;border-top:1px solid var(--line)}
+.xp:first-of-type{border-top:0;padding-top:0}
+.xp time{font-family:var(--f-mono);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.xp h3{font-size:18px}
+.xp .org{color:var(--muted);font-size:15px}
+.xp p{margin:6px 0 0;max-width:66ch;font-size:15px}
+
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+.skills h3{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-bottom:8px}
+.skills p{margin:0;font-size:15px}
+
+footer{padding-block:40px 56px;color:var(--muted);font-size:14px}
+footer .row{display:flex;flex-wrap:wrap;gap:12px 28px}
+
+@media (max-width:720px){
+  .hero{grid-template-columns:1fr}
+  .photo{width:112px;order:-1}
+  .ledger{grid-template-columns:repeat(2,1fr)}
+  .ledger div:nth-child(3){padding-left:0;border-left:0}
+  .ledger div:nth-child(n+3){border-top:1px solid var(--line)}
+  .proj,.xp{grid-template-columns:1fr;gap:8px}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<header>
+  <div class="hero">
+    <div>
+      <div class="label">AI Engineer · Kuwait</div>
+      <h1>Abdelrahman Fayyad Lehlouh</h1>
+      <p class="role">I build <strong>generative AI and machine learning</strong> solutions, from fine-tuning large language models to shipping LLM-powered features inside real web apps.</p>
+      <div class="status">Open to work · on-site, hybrid or remote</div>
+      <div class="contact">
+        <div><span id="em">abdulrahmanlehlouh@gmail.com</span><button class="copy" type="button" data-copy="em">Copy</button></div>
+        <div><span id="ph">+965 5028 2144</span><button class="copy" type="button" data-copy="ph">Copy</button></div>
+        <a href="https://www.linkedin.com/in/abdulrahman-lehlouh-4421b6363" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/A-lehlouh" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <img class="photo" src="data:image/jpeg;base64,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" alt="Portrait of Abdelrahman Lehlouh">
+  </div>
+</header>
+
+<div class="ledger">
+  <div><b>7B</b><small>parameter LLaMA-2 fine-tuned on Kuwaiti Arabic</small></div>
+  <div><b>70B</b><small>Llama 3.3 model powering a marketplace AI assistant</small></div>
+  <div><b>14</b><small>public AI, ML and data projects on GitHub</small></div>
+  <div><b>3</b><small>AI roles: freelance in Kuwait, internships in Kuwait and Jordan</small></div>
+</div>
+
+<section>
+  <div class="label">Profile</div>
+  <h2>Practical AI, from training data to a working product</h2>
+  <p class="lead">I am a Data Science &amp; AI graduate (Al-Ahliyya Amman University, July 2026) working as a freelance AI Engineer. My focus is generative AI and LLMs: fine-tuning open models with LoRA, building LLM-powered assistants with clear, explainable output, and supporting Arabic, including the Kuwaiti dialect. I also build classical machine learning and deep learning models, and I take projects all the way through: data preparation, training, evaluation, and a usable app or report at the end. My earlier customer-facing roles at National Bank of Kuwait and Al Muzaini Exchange taught me to build for the people who will actually use the system.</p>
+</section>
+
+<section>
+  <div class="label">Featured work</div>
+  <h2>Generative AI &amp; LLMs</h2>
+
+  <div class="proj">
+    <aside>Python · Flask<br>Llama-3.3-70B via Groq<br>SQLAlchemy · JWT<br>ReportLab<br><a href="https://github.com/A-lehlouh/FreeLancerHub" target="_blank" rel="noopener">View on GitHub</a></aside>
+    <div>
+      <h3>FreelancerHub AI Smart Assistant</h3>
+      <p>Graduation project: a full-stack freelance marketplace built by a 4-person team. I built the AI Smart Assistant, which interviews the buyer about their requirements, filters and ranks the service catalogue with a weighted scorer, and returns a shortlist where every pick is explained. I also designed the Comparison Tool, which validates the buyer's selection and asks the LLM for a concise summary of each service for a side-by-side decision.</p>
+      <ul class="finds">
+        <li><b>Top 5</b>ranked services, each with an explanation</li>
+        <li><b>EN / AR</b>bilingual PDF report with right-to-left Arabic shaping</li>
+        <li><b>Full stack</b>JWT role-based auth, data models and order workflow</li>
+      </ul>
+      <div class="tags"><span>LLM integration</span><span>Prompt design</span><span>Ranking</span><span>Arabic NLP</span></div>
+    </div>
+  </div>
+
+  <div class="proj">
+    <aside>LLaMA-2 7B<br>LoRA (PEFT)<br>HuggingFace Transformers<br>Diyar United Company<br><a href="https://github.com/A-lehlouh/Kuwaiti-Arabic-LLM-FineTuning" target="_blank" rel="noopener">View on GitHub</a></aside>
+    <div>
+      <h3>Kuwaiti Arabic LLM Fine-Tuning</h3>
+      <p>Adapted LLaMA-2 7B to understand and generate Kuwaiti dialect Arabic, a variety general models handle poorly. I built the full pipeline: JSONL dataset loading, tokenization, a 90/10 train/test split, 3-epoch FP16 training, and inference for text generation.</p>
+      <ul class="finds">
+        <li><b>449</b>Kuwaiti dialect training samples</li>
+        <li><b>r=8, α=32</b>LoRA adapters instead of full fine-tuning</li>
+        <li><b>8-bit</b>quantization to fit a 7B model in limited GPU memory</li>
+      </ul>
+      <div class="tags"><span>Fine-tuning</span><span>PEFT</span><span>Quantization</span><span>Arabic dialects</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="label">Machine learning &amp; deep learning</div>
+  <h2>Models I have built</h2>
+
+  <div class="proj">
+    <aside>TensorFlow / Keras<br>LSTM · BiLSTM<br>GloVe 100d<br><a href="https://github.com/A-lehlouh/Email-Spam-Detection-Deep-Learning" target="_blank" rel="noopener">View on GitHub</a></aside>
+    <div>
+      <h3>Email Spam Detection</h3>
+      <p>Compared four deep learning models: LSTM and bidirectional LSTM trained from scratch against the same architectures with pre-trained GloVe embeddings. Handled class imbalance with computed class weights and evaluated on accuracy, F1, ROC-AUC and confusion matrices over an 80/10/10 split.</p>
+    </div>
+  </div>
+
+  <div class="proj">
+    <aside>TensorFlow / Keras<br>CNN · MobileNetV2<br>Data augmentation<br><a href="https://github.com/A-lehlouh/Animal-Classification-CNN-DeepLearning" target="_blank" rel="noopener">View on GitHub</a></aside>
+    <div>
+      <h3>Animal Image Classification</h3>
+      <p>Classified 3,000 images of cats, dogs and snakes, comparing two custom CNNs against MobileNetV2 transfer learning with ImageNet weights. Used augmentation (rotation, shift, zoom, flip), EarlyStopping and ModelCheckpoint.</p>
+    </div>
+  </div>
+
+  <div class="mini">
+    <article>
+      <h3><a href="https://github.com/A-lehlouh/credit-card-fraud-detection-rf" target="_blank" rel="noopener">Credit Card Fraud Detection</a></h3>
+      <p>Random Forest classifier for spotting fraudulent card transactions.</p>
+      <div class="stack">Python · scikit-learn</div>
+    </article>
+    <article>
+      <h3><a href="https://github.com/A-lehlouh/Car-Price-Prediction-App" target="_blank" rel="noopener">Car Price Prediction App</a></h3>
+      <p>Deployed Streamlit app that predicts used car prices, with interactive charts.</p>
+      <div class="stack">Random Forest · Streamlit</div>
+    </article>
+    <article>
+      <h3><a href="https://github.com/A-lehlouh/iris-species-predictor" target="_blank" rel="noopener">Iris Species Predictor</a></h3>
+      <p>Logistic Regression and KNN classifiers compared on the Iris dataset.</p>
+      <div class="stack">Python · scikit-learn</div>
+    </article>
+    <article>
+      <h3><a href="https://github.com/A-lehlouh/maze-solver-robot" target="_blank" rel="noopener">Maze-Solving Robot</a></h3>
+      <p>Autonomous Arduino robot that detects obstacles and makes navigation decisions in real time.</p>
+      <div class="stack">Arduino · sensors</div>
+    </article>
+  </div>
+
+  <h3 class="sub">Data foundations</h3>
+  <div class="mini">
+    <article>
+      <h3><a href="https://github.com/A-lehlouh/Bank-Loan-Analytics-SQL" target="_blank" rel="noopener">Bank Loan Default Analytics</a></h3>
+      <p>SQL Server analysis of 1M+ real bank transactions, finding early-warning signals for loan default.</p>
+      <div class="stack">SQL Server · window functions</div>
+    </article>
+    <article>
+      <h3><a href="https://github.com/A-lehlouh/Bank-Financing-Excel-Dashboard" target="_blank" rel="noopener">Islamic Bank Financing Dashboard</a></h3>
+      <p>Cleaned 1,329 records into an interactive dashboard covering 34.75M KWD of financing.</p>
+      <div class="stack">Excel · PivotTables</div>
+    </article>
+    <article>
+      <h3><a href="https://github.com/A-lehlouh/Retail-Sales-PowerBI-Dashboard" target="_blank" rel="noopener">Retail Sales Dashboard</a></h3>
+      <p>Sales and profit across 6 Middle East cities.</p>
+      <div class="stack">Power BI · DAX</div>
+    </article>
+  </div>
+</section>
+
+<section>
+  <div class="label">Experience</div>
+  <h2>Where I have worked</h2>
+
+  <div class="xp"><time>Oct 2026 – Present</time><div><h3>Artificial Intelligence Engineer</h3><div class="org">CADER · Freelance · Kuwait, remote</div><p>Building generative AI tools and web applications.</p></div></div>
+  <div class="xp"><time>Oct 2025 – Feb 2026</time><div><h3>AI Specialist (Intern)</h3><div class="org">Optimum Partners MENA · Amman, Jordan</div><p>Built machine learning models and chatbots, and worked on data pipelines and reporting for real business problems.</p></div></div>
+  <div class="xp"><time>Jul 2025 – Aug 2025</time><div><h3>Data Science &amp; AI Intern</h3><div class="org">Diyar United Company · Kuwait</div><p>Delivered three applied projects: Kuwaiti Arabic LLM fine-tuning, a car price prediction app and a BI dashboard.</p></div></div>
+  <div class="xp"><time>Jan 2024 – Mar 2024</time><div><h3>Sales Representative</h3><div class="org">National Bank of Kuwait · Kuwait</div><p>Promoted banking products to retail customers and met monthly sales targets.</p></div></div>
+  <div class="xp"><time>Jul 2022 – Oct 2022</time><div><h3>Customer Service Representative</h3><div class="org">Al Muzaini Exchange Company · Kuwait</div><p>Handled inbound calls and resolved customer issues.</p></div></div>
+</section>
+
+<section>
+  <div class="label">Skills &amp; credentials</div>
+  <h2>Toolkit</h2>
+  <div class="skills">
+    <div><h3>Generative AI &amp; LLMs</h3><p>LLaMA, LoRA / PEFT, 8-bit quantization, HuggingFace Transformers, Groq API, prompt design, chatbots</p></div>
+    <div><h3>Machine &amp; deep learning</h3><p>Python, TensorFlow / Keras, scikit-learn, CNNs, LSTMs, transfer learning, NLP</p></div>
+    <div><h3>Building &amp; data</h3><p>Flask, Streamlit, SQLAlchemy, JavaScript, SQL, Pandas, NumPy, Power BI</p></div>
+    <div><h3>Credentials</h3><p>B.Sc. Data Science &amp; AI, Al-Ahliyya Amman University, 2026<br>AI For Everyone, DeepLearning.AI<br>AI Automation Workshop, IEEE<br>Arabic (native), English (fluent)</p></div>
+  </div>
+</section>
+
+<footer>
+  <div class="row">
+    <span>Abdelrahman Lehlouh · Kuwait / Amman</span>
+    <a href="https://www.linkedin.com/in/abdulrahman-lehlouh-4421b6363" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/A-lehlouh" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</footer>
+</div>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(b){
+  b.addEventListener('click',function(){
+    var el=document.getElementById(b.dataset.copy), t=el.textContent;
+    var done=function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1500)};
+    var sel=function(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected'};
+    try{navigator.clipboard.writeText(t).then(done,sel)}catch(e){sel()}
+  });
+});
+</script>
+
+</body>
+</html>
